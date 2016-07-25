@@ -24,8 +24,10 @@ public function index() {
 	$this->load->plugin('menu');
 	
 	$Menuayarlar = [
+		'menuId'     => 'id',
 		'menuAdi'    => 'menuAdi',
 		'menuLink'   => 'menuLink',
+		'menuUstid'  => 'ustId',
 		'ulAc' 		 => '<ul class="ustUl">',
 		'AltulAc' 	 => '<ul class="altUl">',
 		'liAc' 		 => '<li class="ustLi">',
@@ -43,5 +45,5 @@ public function index() {
 
 ## View
 ```bash
-$this->menu->olustur(0,$menuler);
+$this->menu->olustur($menuler);
 ```
