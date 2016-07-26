@@ -4,9 +4,9 @@ Visit : https://github.com/tkaratug/titan-mvc and http://kilavuz.titanphp.com/
 
 ## Model
 
-###	MenuListele Models	
+###	Menu Model	
 ```bash
-class Menum extends Model
+class Menu extends Model
  {
     public function MenuListele() {
 		
@@ -21,29 +21,33 @@ class Menum extends Model
 ### Index Controller
 ```bash
 public function index() {
-	$this->load->plugin('menu');
-	
+
+	$this->load->plugin('multimenu');
+
 	$Menuayarlar = [
 		'menuId'     => 'id',
 		'menuAdi'    => 'menuAdi',
 		'menuLink'   => 'menuLink',
 		'menuUstid'  => 'ustId',
-		'ulAc' 		 => '<ul class="ustUl">',
-		'AltulAc' 	 => '<ul class="altUl">',
-		'liAc' 		 => '<li class="ustLi">',
-		'AltliAc' 	 => '<li class="altLi">'
+		'ulAc'       => '<ul class="ustUl">',
+		'AltulAc'    => '<ul class="altUl">',
+		'liAc'       => '<li class="ustLi">',
+		'AltliAc'    => '<li class="altLi">'
 	];
-	$this->menu->init($Menuayarlar);
-	
-	$this->load->model('menum');
-	
-	$data['menuler'] = $this->menum->MenuListele();
-	
+	$this->multimenu->init($Menuayarlar);
+
+	$this->load->model('menu');
+
+	$data['menuler'] = $this->menu->MenuListele();
+
 	$this->load->view('home_view', $data);
+	
  }
 ```
 
 ## View
 ```bash
-$this->menu->olustur($menuler);
+
+echo $this->multimenu->olustur($menuler);
+
 ```
