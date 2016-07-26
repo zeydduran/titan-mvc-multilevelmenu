@@ -25,10 +25,10 @@ public function index() {
 	$this->load->plugin('multimenu');
 
 	$Menuayarlar = [
-		'menuId'     => 'id',
-		'menuAdi'    => 'menuAdi',
-		'menuLink'   => 'menuLink',
-		'menuUstid'  => 'ustId',
+		'menuId'     => 'id', // Veritabanında yer alan menü id\'nize ait sütun adını belirtiniz.
+		'menuAdi'    => 'menuAdi', // Veritabanında yer alan menü adınıza ait sütun adını belirtiniz.
+		'menuLink'   => 'menuLink', // Veritabanında yer alan menü linkinize ait sütun adını belirtiniz.
+		'menuUstid'  => 'ustId', // Veritabanında yer alan menü üst id\'nize ait sütun adını belirtiniz.
 		'ulAc'       => '<ul class="ustUl">',
 		'AltulAc'    => '<ul class="altUl">',
 		'liAc'       => '<li class="ustLi">',
