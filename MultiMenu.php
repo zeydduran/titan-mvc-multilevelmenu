@@ -6,7 +6,7 @@
  *
 */
 
-class Menu {
+class MultiMenu {
 	
 	public $ayarlar 	= array();
 	public $menuId;
@@ -113,7 +113,7 @@ class Menu {
 				
 			}
 			
-			return $this->menuler($ustId, $this->menu);
+			return $this->menuler($this->menu, $ustId);
 			
 		}
 		
